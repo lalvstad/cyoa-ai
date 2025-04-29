@@ -1,0 +1,166 @@
+.adventure-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #2d3748;
+    color: #fff;
+    padding: 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSys, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.game-container {
+    max-width: 800px;
+    width: 100%;
+    background-color: #4a5568;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.game-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    text-align: center;
+    color: #ffd700;
+}
+
+.status-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    background-color: #2d3748;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    margin: 0 1rem 1rem;
+}
+
+.ai-meter {
+    display: flex;
+    align-items: center;
+}
+
+.meter-label {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.meter-track {
+    height: 1rem;
+    width: 8rem;
+    background-color: #4a5568;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.meter-fill {
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.meter-positive {
+    background-color: #48bb78; /* green */
+}
+
+.meter-neutral {
+    background-color: #ecc94b; /* yellow */
+}
+
+.meter-negative {
+    background-color: #f56565; /* red */
+}
+
+.meter-value {
+    margin-left: 0.5rem;
+}
+
+.role-indicator {
+    font-weight: normal;
+}
+
+.role-label {
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+.scene-text {
+    margin-bottom: 1.5rem;
+    background-color: #2d3748;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    max-height: 15rem;
+    overflow-y: auto;
+    margin: 0 1rem 1rem;
+    line-height: 1.5;
+    white-space: pre-line
+}
+
+.choices {
+    padding: 0 1rem 1.5rem;
+}
+
+.choices-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #ffd700;
+}
+
+.choice-button {
+    width: 100%;
+    padding: 0.75rem;
+    text-align: center;
+    border-radius: 0.25rem;
+    background-color: #2d3748;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 0.75rem;
+    transition: background-color 0.2s;
+    font-size: 1rem;
+}
+
+.choice-button:hover {
+    background-color: #4a5568;
+    border: 1px solid #718096;
+}
+
+.choice-button:focus {
+    outline: 2px solid #90cdf4;
+}
+
+/* styling the scrollbar */
+.scene-text::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scene-text::-webkit-scrollbar-track {
+    background: #2d3748;
+}
+
+.scene-text::-webkit-scrollbar-thumb {
+    background-color: #718096;
+    border-radius: 4px;
+}
+
+
+/* responsive adjustments */
+@media (max-width: 640px) {
+    .game-container {
+        max-width: 100%;
+    }
+
+    .status-bar {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .meter-track {
+        width: 60vw;
+    }
+}
