@@ -263,7 +263,7 @@ export default function AdventureGame() {
     }
 
     const generateEndingText = () => {
-        let endingText = "";
+        let endingText;
 
         if (isCEO) {
             endingText = "YOUR JOURNEY AS CEO:\n\n";
@@ -277,7 +277,7 @@ export default function AdventureGame() {
             } else if (aiScore >= 25) {
                 endingText += "OUTCOME: Your cautious approach to AI implementation balanced technical innovation with human concerns. TechVai has made moderate efficiency gains while maintaining much of its original workforce. The company is seen as socially responsible but is lagging behind more aggressive competitors. Employee satisfaction is high, but the board is growing restless about return on AI investments."
             } else {
-                endingText += "OUTCOME: Your resistant approach to AI implementation prioritized job preservation and employe input. While TechVai maintained its workforce and culture, competitors have raced ahead with more efficient operations. Your company is now struggling to compete on price and speed. The board is considering leadership changes, though you've become hero among labor advocates.";
+                endingText += "OUTCOME: Your resistant approach to AI implementation prioritized job preservation and employee input. While TechVai maintained its workforce and culture, competitors have raced ahead with more efficient operations. Your company is now struggling to compete on price and speed. The board is considering leadership changes, though you've become hero among labor advocates.";
             }
         } else {
             endingText = "YOUR JOURNEY AS AN EMPLOYEE:\n\n";
@@ -338,7 +338,7 @@ export default function AdventureGame() {
         scene = {
             text: "Welcome! In this adventure, you'll explore the impacts of AI in the workplace. Choose your perspective:",
             choices: [
-                { text: "Play as an eployee navigating AI changes", nextScene: "start", setCEO: false },
+                { text: "Play as an employee navigating AI changes", nextScene: "start", setCEO: false },
                 { text: "Play as the CEO implementing AI strategy", nextScene: "start", setCEO: true }
             ]
         };
@@ -357,7 +357,7 @@ export default function AdventureGame() {
         scene = {
             text: "Welcome! In this adventure, you'll explore the impacts of AI in the workplace. Choose your perspective:",
             choices: [
-                { text: "Play as an eployee navigating AI changes", nextScene: "start", setCEO: false },
+                { text: "Play as an employee navigating AI changes", nextScene: "start", setCEO: false },
                 { text: "Play as the CEO implementing AI strategy", nextScene: "start", setCEO: true }
             ]
         };
